@@ -1,0 +1,55 @@
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes vibration {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-3px); }
+    40% { transform: translateX(3px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .scrolling-text{
+    display: inline-block;
+    animation: scroll-text 10s linear infinite;
+  }
+  
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .scrolling-text{
+    display: inline-block;
+    animation: color-cycle 1.5s infinite, vibration 0.5s infinite;
+  }
+  
+  @keyframes color-cycle {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+  }
+  
